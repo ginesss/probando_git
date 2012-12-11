@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+        "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>index</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Tutorial Git ssh">
+<meta name="keywords" content="GIT, SSH, Drag and Drop">
+<meta name="author" content="Gines Capote">
+<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+
+<div id="cabecera">
+<h1>Solución problemas claves ssh con Git</h1>
+<h2>Permission denied (publickey)</h2>
+<i><b>Esto me ha funcionado en un Mac OS X versión 10.6.8.</b></i>
+Iba embalado con el tutorial de Git, que fácil, cuando me encontré un problema con las claves ssh. En esta página explico como lo resolví.
+Aproveché al escribir esta página para de camino probar un plugin que me llegó hoy de <b>drag&drop</b>, o sea que si te 
+quieres entretener puedes arrastrar los cuadrados de un lado a otro, pinchándolos por la cabecera. 
+</div>
+
+
+<div id="green" class="draggable">
+<div style="margin:15px;">
+<p>Siguiendo este excelente <a href= "http://try.github.com/levels/1/challenges/1" target="_blank">tutorial sobre Git</a>, me econtré con un problema: las claves ssh</p> 
+
+<center><h2>TUTORIAL INTERACTIVO</h2></center>
+<center><h3>de GIT</h3></center>
+</div>
+</div>
+
+
+<div id="magenta" class="draggable">
+<div style="margin:15px;">
+<h3>Parte 1: iniciando el tutorial</h3>
+<pre>
+mkdir probando_git
+cd probando_git
+
+git init
+git status
+</pre>
+<i>metemos un fichero octocat.txt</i>
+<pre>
+git status
+git add octocat.txt
+git status
+git commit -m 'add cute octocat story'
+</pre>
+<i>metemos mas ficheros</i>
+<pre>
+git add '*.txt'
+git status
+git commit -m 
+	'add all the octocat txt files'
+git log
+git remote add origin 
+	git@github.com:ginesss/probando_git.git
+</pre>
+</div>
+</div>
+
+<div id="orange" class="draggable">
+<div style="margin:15px;">
+<h3>Parte 2: Error Publickey ssh</h3>
+<p>Hastá ahí todo bien pero al llegar aquí:</p> 
+
+<b>git push -u origin master</b>
+
+<i>me daba un error con las claves ssh</i>
+
+En esta <a href="https://help.github.com/articles/generating-ssh-keys#macosx" target="_blank">página</a> encontré la solución 
+
+y funcionó! ¡ya reconoce las claves!
+</div>
+</div>
+
+
+<div id="lightgreen" class="draggable">
+<div style="margin:15px;">
+<h3>Parte 3: Tuve que crear repositorio en github</h3>
+<i>funcionó pero al repetir el comando </i>
+
+<b>git push -u origin master</b>
+
+<i>me daba un error:</i> 
+<b>ERROR: Repository not found.</b>
+<p>tuve que crear el nombre del repositorio desde GitHub, 
+voler a ejecutar <b>git push -u origin master</b>
+y entonces funcionó bien.</p>
+</div>
+</div>
+
+<script type="text/javascript" src="Event.js"></script>
+<script type="text/javascript" src="Dragdrop.js"></script>
+<script>
+"use strict";
+var evt         = new Event(),
+    dragdrop    = new Dragdrop(evt);
+</script>
+</body>
+</html>

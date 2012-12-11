@@ -1,0 +1,111 @@
+http://try.github.com/levels/1/challenges/1
+
+mkdir probando_git
+cd probando_git
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:ginesss/probando_git.git
+git push -u origin master
+
+TUTORIAL INTERACTIVO
+git init
+git status
+metemos un fichero octocat.txt
+git status
+git add octocat.txt
+git status
+git commit -m 'add cute octocat story'
+metemos mas ficheros
+git add '*.txt'
+git status
+git commit -m 'add all the octocat txt files'
+git log
+git remote add origin git@github.com:ginesss/probando_git.git
+git push -u origin master
+
+estoy probando lo que dice esta pagina
+https://help.github.com/articles/generating-ssh-keys#macosx
+funcionó! ¡ya me reconoce las claves!
+
+funciona pero al repetir el comando
+git push -u origin master
+aqui me daba un error 
+ERROR: Repository not found.
+tuve que crear el nombre del repositorio en GitHub
+voler a ejecutar git push -u origin master
+y funcionó bien
+
+git pull origin master
+git diff HEAD
+git add octofamily/octodog.txt
+git diff --staged
+git reset octofamily/octodog.txt
+git checkout --octocat.txt
+git branch clean_up
+git checkout clean_up
+git rm '*.txt'
+git commit -m 'Remove all the cats'
+git checkout master
+git merge clean_up
+git branch -d clean_up
+git push
+
+Git is a distributed version control system DVCS
+creado por Linus Thorvalds
+Official Git Site http://git-scm.com/
+$ Git help 
+te da una lista de comandos
+el primer paso al instalar git es dar una serie de valores
+$ git config --global user.name "Gines Capote"
+$ git config --global user.email "ginescapote@yahoo.es"
+$ git config --global color.ui true
+
+Empezar un repositorio
+primero creamos una carpeta
+
+$ mkdir store
+$ cd store
+
+podemos incluir algunos ficheros y al terminar
+
+$ git init
+
+esto crea un repositorio local
+
+ahora creamos por ejemplo un fichero README.txt
+empieza como untracked
+lo sumamos al area de almacenamiento con add
+y luego hacemos los cambios (con los almacenados) con commit
+luego modificamos README.txt y añadimos LICENSE
+añadimos ambos ficheros al area de almacenamiento (staging area)
+y hacemos otro commit
+$ git status
+te dice que ha cambiado desde tu último commit
+si hacemos otro git status en este momento
+veremos nuestro fichero almacenado (staged)
+
+Nuestro primer commit
+$ git commit -m "Create a README"
+$ git status
+
+Ahora modificaremos el README.txt & añadimos LICENSE
+$ git status
+podemos añadirlos con git add README.TXT LICENSE o bien git add --all 
+$ git add --all
+$ git status
+hacer cambios
+$ git commit -m "Add LICENSE and finish README"
+
+Ahora tenemos 2 commits pero como sabemos cuales son como sabemos la historia 
+$ git log
+
+Otras formas de añadir
+$ git add <lista de ficheros> añade la lista de ficheros
+$ git add --all Añade todos los ficheros
+$ git add *.txt  añade los ficheros de txt en el directorio en curso
+$ git add "*.txt" añade los ficheros de txt en todo el proyecto
+$ git add docs/*.txt añade todos los ficheros de txt en la carpeta docs
+$ git add  docs/ añade todos los ficheros en la carpeta docs
+

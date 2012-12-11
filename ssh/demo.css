@@ -1,0 +1,100 @@
+body {
+    background-color: #000;
+}
+pre {
+font-size:15px;
+}
+
+a {
+color: red;
+}
+
+.draggable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    cursor: pointer;
+    background-color: #fff;
+    margin: 10;
+    padding: 10;
+    color: #fff;
+    text-align: none
+}
+
+#cabecera {
+    background-color: #4C1F00;
+    color: #fff;
+    height: 190px;
+    left: 0;
+    top: 0;
+    width: auto;
+}
+
+#green {
+    background-color: green;
+    height: 190px;
+    left: 15;
+    margin-top: 15px;
+    width: 350px;
+}
+
+#blue {
+    background-color: blue;
+    height: 300px;
+    left: 25px;
+    top: 25px;
+    width: 300px;
+}
+
+#red {
+    background-color: red;
+    height: 250px;
+    left: 50px;
+    top: 50px;
+    width: 250px;
+}
+
+#orange {
+    background-color: orange;
+    height: 300px;
+    left: 365px;
+    margin-top: 15px;
+    width: 400px;
+}
+
+#magenta {
+    background-color: magenta;
+    height: 450px;
+    left: 8px;
+    top: 425px;
+    width: 450px;
+}
+
+#yellow {
+    background-color: yellow;
+    color: red;
+    height: 100px;
+    left: 125px;
+    top: 125px;
+    width: 100px;
+}
+
+#lightgreen {
+    background-color: lightgreen;
+    height: 200px;
+    left: 465px;
+    top: 530px;
+    width: 500px;
+}
+
+#info {
+    height: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    z-index: -1;
+}
